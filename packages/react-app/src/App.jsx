@@ -901,7 +901,7 @@ function App(props) {
 
       {/* ✏️ Edit the header and change the title to your project name */}
 
-      <div
+      {/* <div
         style={{ clear: "both", opacity: yourLocalBalance ? 1 : 0.2, width: 500, margin: "auto", position: "relative" }}
       >
         <Balance value={yourLocalBalance} size={12 + window.innerWidth / 16} price={price} />
@@ -909,7 +909,7 @@ function App(props) {
           {networkSelect}
           {faucetHint}
         </span>
-      </div>
+      </div> */}
 
       {address && (
         <div style={{ padding: 16, cursor: "pointer", backgroundColor: "#FFFFFF", width: 420, margin: "auto" }}>
@@ -1052,120 +1052,7 @@ function App(props) {
         </div>
       </div>
 
-      {/* <BrowserRouter>
-
-        <Menu style={{ textAlign:"center" }} selectedKeys={[route]} mode="horizontal">
-          <Menu.Item key="/">
-            <Link
-              onClick={() => {
-                setRoute("/");
-              }}
-              to="/"
-            >
-              YourContract
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/hints">
-            <Link
-              onClick={() => {
-                setRoute("/hints");
-              }}
-              to="/hints"
-            >
-              Hints
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/exampleui">
-            <Link
-              onClick={() => {
-                setRoute("/exampleui");
-              }}
-              to="/exampleui"
-            >
-              ExampleUI
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/mainnetdai">
-            <Link
-              onClick={() => {
-                setRoute("/mainnetdai");
-              }}
-              to="/mainnetdai"
-            >
-              Mainnet DAI
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/subgraph">
-            <Link
-              onClick={() => {
-                setRoute("/subgraph");
-              }}
-              to="/subgraph"
-            >
-              Subgraph
-            </Link>
-          </Menu.Item>
-        </Menu>
-        <Switch>
-          <Route exact path="/">
-            }
-            <Contract
-              name="YourContract"
-              signer={userProvider.getSigner()}
-              provider={localProvider}
-              address={address}
-              blockExplorer={blockExplorer}
-            />
-
-
-
-          </Route>
-          <Route path="/hints">
-            <Hints
-              address={address}
-              yourLocalBalance={yourLocalBalance}
-              mainnetProvider={mainnetProvider}
-              price={price}
-            />
-          </Route>
-          <Route path="/exampleui">
-            <ExampleUI
-              address={address}
-              userProvider={userProvider}
-              mainnetProvider={mainnetProvider}
-              localProvider={localProvider}
-              yourLocalBalance={yourLocalBalance}
-              price={price}
-              tx={tx}
-              writeContracts={writeContracts}
-              readContracts={readContracts}
-              purpose={purpose}
-              setPurposeEvents={setPurposeEvents}
-            />
-          </Route>
-          <Route path="/mainnetdai">
-            <Contract
-              name="DAI"
-              customContract={mainnetDAIContract}
-              signer={userProvider.getSigner()}
-              provider={mainnetProvider}
-              address={address}
-              blockExplorer="https://etherscan.io/"
-            />
-          </Route>
-          <Route path="/subgraph">
-            <Subgraph
-              subgraphUri={props.subgraphUri}
-              tx={tx}
-              writeContracts={writeContracts}
-              mainnetProvider={mainnetProvider}
-            />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-*/}
-
-      <div style={{ padding: 16, backgroundColor: "#FFFFFF", width: 420, margin: "auto" }}>
+      {/* <div style={{ padding: 16, backgroundColor: "#FFFFFF", width: 420, margin: "auto" }}>
         <TransactionResponses
           provider={userProvider}
           signer={userProvider.getSigner()}
@@ -1174,9 +1061,9 @@ function App(props) {
           chainId={targetNetwork.chainId}
           blockExplorer={blockExplorer}
         />
-      </div>
+      </div> */}
 
-      <div style={{ zIndex: -1, paddingTop: 20, opacity: 0.5, fontSize: 12 }}>
+      {/* <div style={{ zIndex: -1, paddingTop: 20, opacity: 0.5, fontSize: 12 }}>
         <Button
           style={{ margin: 8, marginTop: 16 }}
           onClick={() => {
@@ -1194,9 +1081,9 @@ function App(props) {
         >
           <span style={{ marginRight: 8 }}>👛</span> Inventory
         </Button>
-      </div>
+      </div> */}
 
-      <div style={{ clear: "both", width: 500, margin: "auto", marginTop: 32, position: "relative" }}>
+      {/* <div style={{ clear: "both", width: 500, margin: "auto", marginTop: 32, position: "relative" }}>
         {wallectConnectConnector && !wallectConnectConnector.connected && (
           <div>
             <Spin />
@@ -1248,7 +1135,7 @@ function App(props) {
         ) : (
           ""
         )}
-      </div>
+      </div> */}
 
       {targetNetwork.name == "ethereum" ? (
         <div style={{ zIndex: -1, padding: 64, opacity: 0.5, fontSize: 12 }}>
@@ -1308,13 +1195,13 @@ function App(props) {
         ""
       )}
 
-      <div style={{ zIndex: -1, padding: 64, opacity: 0.5, fontSize: 12 }}>
+      {/* <div style={{ zIndex: -1, padding: 64, opacity: 0.5, fontSize: 12 }}>
         created with <span style={{ marginRight: 4 }}>🏗</span>
         <a href="https://github.com/austintgriffith/scaffold-eth#-scaffold-eth" target="_blank">
           scaffold-eth
         </a>
       </div>
-      <div style={{ padding: 32 }} />
+      <div style={{ padding: 32 }} /> */}
 
       <div
         style={{
@@ -1340,14 +1227,6 @@ function App(props) {
         </Button>
       </div>
 
-      {/*
-
-      <Modal title={walletModalData && walletModalData.payload && walletModalData.payload.method} visible={isWalletModalVisible} onOk={handleOk} onCancel={handleCancel}>
-       <pre>
-        {walletModalData && walletModalData.payload && JSON.stringify(walletModalData.payload.params, null, 2)}
-       </pre>
-     </Modal>
-  */}
 
       {/* 🗺 Extra UI like gas price, eth price, faucet, and support: */}
       <div style={{ position: "fixed", textAlign: "left", left: 0, bottom: 20, padding: 10 }}>
